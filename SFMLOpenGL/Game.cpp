@@ -49,13 +49,87 @@ void Game::draw()
 {
 	cout << "Draw up" << endl;
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
+
 	glBegin(GL_TRIANGLES);
 	{ 
-		glVertex3f(0.0, 2.0, -5.0); 
-		glVertex3f(-2.0, -2.0, -5.0); 
-		glVertex3f(2.0, -2.0, -5.0); 
+		glVertex3f(0.5, 1.0, -2.5); 
+		glVertex3f(0.0, 0.0, -2.5); 
+		glVertex3f(1.0, 0.0, -2.5);
 	}
 	glEnd();
+
+	glBegin(GL_POINTS);
+	{
+		glVertex3f(-1.0, 2.0, -5.0);
+	}
+	glEnd();
+	
+	glBegin(GL_LINES);
+	{
+		glVertex3f(-2.0, 2.0, -5.0);
+		glVertex3f(-2.0, -2.0, -5.0);
+	}
+	glEnd();
+	
+	//glBegin(GL_LINE_STRIP);
+	//{
+	//	glVertex3f(0.0, 2.0, -5.0);
+	//	glVertex3f(-2.0, -2.0, -5.0);
+	//}
+	//glEnd();
+	
+	//glBegin(GL_TRIANGLES);
+	//{
+	//	glVertex3f(0.0, 2.0, -5.0);
+	//	glVertex3f(-2.0, -2.0, -5.0);
+	//	glVertex3f(2.0, -2.0, -5.0);
+	//}
+	//glEnd();
+	
+	//glBegin(GL_TRIANGLE_STRIP);
+	//{
+	//	glVertex3f(0.0, 2.0, -5.0);
+	//	glVertex3f(-2.0, -2.0, -5.0);
+	//	glVertex3f(2.0, -2.0, -5.0);
+	//}
+	//glEnd();
+	
+	//glBegin(GL_TRIANGLE_FAN);
+	//{
+	//	glVertex3f(0.0, 2.0, -5.0);
+	//	glVertex3f(-2.0, -2.0, -5.0);
+	//	glVertex3f(2.0, -2.0, -5.0);
+	//}
+	//glEnd();
+	
+	glBegin(GL_QUADS);
+	{
+		glVertex3f(-0.5, 0.0, -5.0);
+		glVertex3f(-1.5, 0.0, -5.0);
+		glVertex3f(-1.5, -1.0, -5.0);
+		glVertex3f(-0.5, -1.0, -5.0);
+	}
+	glEnd();
+	
+	//glBegin(GL_QUAD_STRIP);
+	//{
+	//	glVertex3f(-1.0, 1.0, -5.0);
+	//	glVertex3f(1.0, 1.0, -5.0);
+	//	glVertex3f(-1.0, -1.0, -5.0);
+	//	glVertex3f(1.0, -1.0, -5.0);
+	//}
+	//glEnd();
+	
+	glBegin(GL_POLYGON);
+	{
+		glVertex3f(1.0, 0.0, -5.0);
+		glVertex3f(0.0, -1.0, -5.0);
+		glVertex3f(.5, -2.0, -5.0);
+		glVertex3f(1.5, -2.0, -5.0);
+		glVertex3f(2.0, -1.0, -5.0);
+	}
+	glEnd();
+
 	window.display();
 }
 
